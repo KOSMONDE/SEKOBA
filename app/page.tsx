@@ -47,7 +47,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="hidden md:flex"
             >
-              <Button>Prendre RDVVV</Button>
+              <Button>Prendre RDV</Button>
             </a>
             <Button
               variant="outline"
