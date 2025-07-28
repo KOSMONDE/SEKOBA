@@ -85,26 +85,31 @@ export default function ServicesPage() {
             </div>
 
             <Tabs defaultValue="coupes">
-              <TabsList className="flex overflow-x-auto whitespace-nowrap no-scrollbar gap-4 px-4 mb-4 bg-white bg-opacity-80 rounded-lg md:grid md:grid-cols-4 md:gap-0 md:p-0 md:mb-0 md:bg-opacity-100 md:rounded-none">
+              <TabsList
+  className="grid grid-cols-2 gap-3 px-4 mb-6 pb-4 min-h-[56px] bg-white
+           md:flex md:overflow-x-auto md:whitespace-nowrap md:no-scrollbar md:gap-4 md:px-0 md:mb-0 md:pb-0 md:bg-white"
+
+>
+
+
+  <TabsTrigger className="w-full text-center" value="coupes">
+    Coupes & Coiffage
+  </TabsTrigger>
+  <TabsTrigger className="w-full text-center" value="soins">
+    Soins & Lissages
+  </TabsTrigger>
+  <TabsTrigger className="w-full text-center" value="protectrices">
+    Coloration
+  </TabsTrigger>
+  <TabsTrigger className="w-full text-center" value="coloration">
+    Extensions & Onglerie
+  </TabsTrigger>
+</TabsList>
 
 
 
+              <hr className="hidden md:block w-full border-t border-gray-200 my-6" />
 
-
-                <TabsTrigger className="w-full text-center" value="coupes">
-                  Coupes & Coiffage
-                </TabsTrigger>
-                <TabsTrigger className="w-full text-center" value="soins">
-                  Soins & Lissages
-                </TabsTrigger>
-                <TabsTrigger className="w-full text-center" value="protectrices">
-                  Coloration
-                </TabsTrigger>
-                <TabsTrigger className="w-full text-center" value="coloration">
-                  Extensions & Onglerie
-                </TabsTrigger>
-              </TabsList>
-              <hr className="w-full border-t border-gray-200 my-4 md:my-6" />
 
 
 
