@@ -10,14 +10,14 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const galleryItems = [
-  { type: "video", src: "/videos/VID-20250919-WA0058.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
-  { type: "video", src: "/videos/VID-20250919-WA0055.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
-  { type: "video", src: "/videos/VID-20250919-WA0061.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
-  { type: "video", src: "/videos/VID-20250919-WA0026.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
-  { type: "video", src: "/videos/VID-20250919-WA0053.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
-  { type: "video", src: "/videos/VID-20250919-WA0027.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
-  { type: "video", src: "/videos/VID-20250919-WA0057.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
-  { type: "video", src: "/videos/VID-20250919-WA0028.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/Videos/VID-20250919-WA0058.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/Videos/VID-20250919-WA0055.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/Videos/VID-20250919-WA0061.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/Videos/VID-20250919-WA0026.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/Videos/VID-20250919-WA0053.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/Videos/VID-20250919-WA0027.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/Videos/VID-20250919-WA0057.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/Videos/VID-20250919-WA0028.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
 ]
 
 
