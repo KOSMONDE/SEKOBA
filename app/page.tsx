@@ -9,16 +9,17 @@ import { useState } from "react"
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const galleryImages = [
-    "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png",
-    "/galeries/42b81765-2334-4ff1-93c6-b2e3444855b8.png",
-    "/galeries/15372a7d-525b-4666-a51c-9c46047c8921.png",
-    "/galeries/27043326-0a5c-4ae1-b212-45843e613342.png",
-    "/galeries/af0dfa9e-7416-4d9c-8757-875d408f4006.png",
-    "/galeries/c8da70a8-3c36-4efe-8919-4866eebdc0bc.png",
-    "/galeries/e4b6030d-3602-4c34-8bf7-1447dc6724e4.png",
-    "/galeries/b1af0d14-5ea2-469c-b412-2f1c43878f74.png"
-  ]
+  const galleryItems = [
+  { type: "video", src: "/videos/VID-20250919-WA0058.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/videos/VID-20250919-WA0055.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/videos/VID-20250919-WA0061.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/videos/VID-20250919-WA0026.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/videos/VID-20250919-WA0053.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/videos/VID-20250919-WA0027.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/videos/VID-20250919-WA0057.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+  { type: "video", src: "/videos/VID-20250919-WA0028.mp4", poster: "/galeries/2b63f081-b205-473a-bbf8-a2781a5a1a9f.png" },
+]
+
 
 
   return (
@@ -241,22 +242,32 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {galleryImages.map((src, index) => (
-                <div
-                  key={index}
-                  className="relative w-full h-96 overflow-hidden rounded-lg"
-                >
-                  <Image
-                    src={src}                         // <-- utilisation de src ici !
-                    alt={`Photo ${index + 1}`}
-                    fill
-                    className="object-cover transition-transform hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 25vw"
-                  />
-                </div>
-              ))}
-            </div>
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+  {galleryItems.map((item, index) => (
+    <div key={index} className="relative w-full h-96 overflow-hidden rounded-lg">
+      {item.type === "image" ? (
+        <Image
+          src={item.src}
+          alt={`Galerie ${index + 1}`}
+          fill
+          className="object-cover transition-transform hover:scale-105"
+          sizes="(max-width: 768px) 100vw, 25vw"
+        />
+      ) : (
+        <video
+          src={item.src}
+          poster={item.poster}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        />
+      )}
+    </div>
+  ))}
+</div>
+
 
             <div className="mt-12 text-center">
               <a
